@@ -119,13 +119,12 @@ export default function FooterV1() {
   return (
     <footer className="border-t bg-background pt-12 mt-10">
       <div className="container mx-auto px-4 md:px-0">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col items-center text-center md:items-start md:text-left gap-4">
-            <Logo textClassName="text-xl md:text-2xl" />
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left gap-4 lg:col-span-2">
+            <Logo textClassName="text-xl md:text-2xl whitespace-nowrap" />
             <p className="text-sm text-muted-foreground w-full md:w-4/5">
-              Your trusted destination for authentic Ayurvedic medicines, organic herbs, and natural wellness products.
+              Your trusted destination for high-quality electronics tools, smart wearables, intelligent lighting systems, and modern plug devices.
             </p>
-
             {/* PWA Download App Button */}
             {!isStandalone && (
               <Button
@@ -170,7 +169,7 @@ export default function FooterV1() {
             <ul className="grid gap-3 text-sm text-muted-foreground">
               <li className="flex items-start justify-center md:justify-start gap-3">
                 <MapPin size={16} className="text-primary mt-0.5 shrink-0" />
-                <span>{settings?.contact?.address || '123 Rimon Ayurbedic Avenue'}</span>
+                <span>{settings?.contact?.address || '123 Inflation Engineering Avenue'}</span>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <Phone size={16} className="text-primary shrink-0" />
@@ -178,7 +177,7 @@ export default function FooterV1() {
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <Mail size={16} className="text-primary shrink-0" />
-                <span>{settings?.contact?.email || 'support@rimonherbal.com'}</span>
+                <span>{settings?.contact?.email || 'support@inflationengineering.com'}</span>
               </li>
             </ul>
             {hasSocialLinks && (
@@ -222,7 +221,7 @@ export default function FooterV1() {
 
         <div className="mt-12 flex flex-col items-center justify-between border-t py-6 sm:flex-row text-sm text-muted-foreground gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <p>© {new Date().getFullYear()} {settings?.brandName || 'Rimon Ayurbedic'}. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} {settings?.brandName || 'Inflation Engineering'}. All rights reserved.</p>
           </div>
 
           <div className="flex items-center gap-6">

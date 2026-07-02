@@ -16,7 +16,7 @@ if (fs.existsSync(envPath)) {
 
 if (!mongodbUri) {
   // Fallback if env file doesn't parse correctly
-  mongodbUri = 'mongodb+srv://rimonayurbedic:S4Epscw0SOkd5ZtG@cluster0.e5n1hnl.mongodb.net/rimonayurbedic';
+  mongodbUri = 'mongodb+srv://inflationengineering:S4Epscw0SOkd5ZtG@cluster0.e5n1hnl.mongodb.net/inflationengineering';
 }
 
 console.log('Connecting to MongoDB...');
@@ -40,57 +40,57 @@ const Banner = mongoose.models.Banner || mongoose.model('Banner', BannerSchema);
 
 const banners = [
   {
-    title: 'Pure Ayurvedic Wellness',
-    image: '/assets/images/Banner/Pure Ayurvedic Wellness.webp',
-    link: 'https://www.rimonherbal.com/shop',
-    primaryBtnText: 'Shop',
-    primaryBtnLink: 'https://www.rimonherbal.com/shop',
-    secondaryBtnText: 'Contact',
-    secondaryBtnLink: 'https://wa.me/8801813606924',
+    title: 'Precision Electronic Tools',
+    image: '/assets/images/Banner/Precision Electronic Tools.webp',
+    link: '/shop',
+    primaryBtnText: 'Shop Now',
+    primaryBtnLink: '/shop',
+    secondaryBtnText: 'Contact Us',
+    secondaryBtnLink: '/contact',
     order: 1,
     isActive: true,
   },
   {
-    title: 'Revitalizing Hair Care',
-    image: '/assets/images/Banner/Revitalizing Hair Care.webp',
-    link: 'https://www.rimonherbal.com/shop',
-    primaryBtnText: 'Shop',
-    primaryBtnLink: 'https://www.rimonherbal.com/shop',
-    secondaryBtnText: 'Contact',
-    secondaryBtnLink: 'https://wa.me/8801813606924',
+    title: 'Smart Wearable Devices',
+    image: '/assets/images/Banner/Smart Wearables.webp',
+    link: '/shop',
+    primaryBtnText: 'Explore',
+    primaryBtnLink: '/shop',
+    secondaryBtnText: 'Contact Us',
+    secondaryBtnLink: '/contact',
     order: 2,
     isActive: true,
   },
   {
-    title: 'Radiant Glowing Skin',
-    image: '/assets/images/Banner/Radiant Glowing Skin.webp',
-    link: 'https://www.rimonherbal.com/shop',
-    primaryBtnText: 'Shop',
-    primaryBtnLink: 'https://www.rimonherbal.com/shop',
-    secondaryBtnText: 'Contact',
-    secondaryBtnLink: 'https://wa.me/8801813606924',
+    title: 'Smart Lighting Systems',
+    image: '/assets/images/Banner/Smart Lighting.webp',
+    link: '/shop',
+    primaryBtnText: 'Shop Now',
+    primaryBtnLink: '/shop',
+    secondaryBtnText: 'Contact Us',
+    secondaryBtnLink: '/contact',
     order: 3,
     isActive: true,
   },
   {
-    title: 'Ultimate Immunity Boost',
-    image: '/assets/images/Banner/Ultimate Immunity Boost.webp',
-    link: 'https://www.rimonherbal.com/shop',
-    primaryBtnText: 'Shop',
-    primaryBtnLink: 'https://www.rimonherbal.com/shop',
-    secondaryBtnText: 'Contact',
-    secondaryBtnLink: 'https://wa.me/8801813606924',
+    title: 'Smart Plugs & Power Devices',
+    image: '/assets/images/Banner/Smart Plugs and Switches.webp',
+    link: '/shop',
+    primaryBtnText: 'Shop Now',
+    primaryBtnLink: '/shop',
+    secondaryBtnText: 'Contact Us',
+    secondaryBtnLink: '/contact',
     order: 4,
     isActive: true,
   },
   {
-    title: 'Organic Herbal Teas',
-    image: '/assets/images/Banner/Organic Herbal Teas.webp',
-    link: 'https://www.rimonherbal.com/shop',
-    primaryBtnText: 'Shop',
-    primaryBtnLink: 'https://www.rimonherbal.com/shop',
-    secondaryBtnText: 'Contact',
-    secondaryBtnLink: 'https://wa.me/8801813606924',
+    title: 'Tech DIY & Diagnostic Equipment',
+    image: '/assets/images/Banner/Diagnostic Equipment.webp',
+    link: '/shop',
+    primaryBtnText: 'Browse Tools',
+    primaryBtnLink: '/shop',
+    secondaryBtnText: 'Contact Us',
+    secondaryBtnLink: '/contact',
     order: 5,
     isActive: true,
   }
@@ -102,7 +102,7 @@ async function seed() {
       await mongoose.connect(mongodbUri);
     } catch (connErr) {
       console.log('SRV connection failed, trying direct connection fallback...');
-      const directUri = 'mongodb://RimonAyurbedic:xI2QuBaFZsYQ5vRD@ac-jrowhop-shard-00-00.e5n1hnl.mongodb.net:27017,ac-jrowhop-shard-00-01.e5n1hnl.mongodb.net:27017,ac-jrowhop-shard-00-02.e5n1hnl.mongodb.net:27017/RimonAyurbedic?ssl=true&authSource=admin';
+      const directUri = 'mongodb://inflationengineering:xI2QuBaFZsYQ5vRD@ac-jrowhop-shard-00-00.e5n1hnl.mongodb.net:27017,ac-jrowhop-shard-00-01.e5n1hnl.mongodb.net:27017,ac-jrowhop-shard-00-02.e5n1hnl.mongodb.net:27017/inflationengineering?ssl=true&authSource=admin';
       await mongoose.connect(directUri);
     }
     console.log('Connected to MongoDB successfully.');

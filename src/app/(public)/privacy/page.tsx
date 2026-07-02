@@ -5,8 +5,8 @@ import { Separator } from '@/components/ui/separator';
 import { ShieldCheck, Info, Share2, Lock, Eye, Bell } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Rimon Ayurbedic',
-  description: 'Learn how Rimon Ayurbedic collects, uses, and protects your personal information.',
+  title: 'Privacy Policy | Inflation Engineering',
+  description: 'Learn how Inflation Engineering collects, uses, and protects your personal information.',
 };
 
 async function getSettings() {
@@ -15,7 +15,7 @@ async function getSettings() {
     const settings = await GlobalSettings.findOne().lean();
     if (!settings) {
       return {
-        brandName: "Rimon Ayurbedic",
+        brandName: "Inflation Engineering",
         contact: {
           email: "support@rimonherbal.com"
         }
@@ -25,7 +25,7 @@ async function getSettings() {
   } catch (error) {
     console.error('Error fetching settings for privacy page:', error);
     return {
-      brandName: "Rimon Ayurbedic",
+      brandName: "Inflation Engineering",
       contact: {
         email: "support@rimonherbal.com"
       }

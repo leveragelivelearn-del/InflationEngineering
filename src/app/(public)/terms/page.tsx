@@ -5,8 +5,8 @@ import { Separator } from '@/components/ui/separator';
 import { FileText, ShoppingBag, Truck, UserCheck, Scale, HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Rimon Ayurbedic',
-  description: 'Understand the terms and conditions for shopping at Rimon Ayurbedic.',
+  title: 'Terms & Conditions | Inflation Engineering',
+  description: 'Understand the terms and conditions for shopping at Inflation Engineering.',
 };
 
 async function getSettings() {
@@ -15,7 +15,7 @@ async function getSettings() {
     const settings = await GlobalSettings.findOne().lean();
     if (!settings) {
       return {
-        brandName: "Rimon Ayurbedic",
+        brandName: "Inflation Engineering",
         contact: {
           email: "support@rimonherbal.com",
           phone: "+8801234567890"
@@ -26,7 +26,7 @@ async function getSettings() {
   } catch (error) {
     console.error('Error fetching settings for terms page:', error);
     return {
-      brandName: "Rimon Ayurbedic",
+      brandName: "Inflation Engineering",
       contact: {
         email: "support@rimonherbal.com",
         phone: "+8801234567890"

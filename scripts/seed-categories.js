@@ -16,7 +16,7 @@ if (fs.existsSync(envPath)) {
 
 if (!mongodbUri) {
   // Fallback if env file doesn't parse correctly
-  mongodbUri = 'mongodb+srv://RimonAyurbedic:xI2QuBaFZsYQ5vRD@cluster0.e5n1hnl.mongodb.net/RimonAyurbedic';
+  mongodbUri = 'mongodb+srv://inflationengineering:xI2QuBaFZsYQ5vRD@cluster0.e5n1hnl.mongodb.net/inflationengineering';
 }
 
 console.log('Connecting to MongoDB...');
@@ -36,33 +36,33 @@ const Category = mongoose.models.Category || mongoose.model('Category', Category
 
 const categories = [
   {
-    name: 'Ayurvedic Medicine & Remedies',
-    slug: 'ayurvedic-medicine-remedies',
-    image: '/assets/images/cagetory/Ayurvedic Medicine & Remedies.webp',
+    name: 'Electronics Tools',
+    slug: 'electronics-tools',
+    image: '/assets/images/cagetory/Electronics Tools.webp',
     isActive: true,
   },
   {
-    name: 'Herbal Hair & Scalp Care',
-    slug: 'herbal-hair-scalp-care',
-    image: '/assets/images/cagetory/Herbal Hair & Scalp Care.webp',
+    name: 'Smart Wearables',
+    slug: 'smart-wearables',
+    image: '/assets/images/cagetory/Smart Wearables.webp',
     isActive: true,
   },
   {
-    name: 'Organic Skin & Beauty',
-    slug: 'organic-skin-beauty',
-    image: '/assets/images/cagetory/Organic Skin & Beauty.webp',
+    name: 'Smart Lighting',
+    slug: 'smart-lighting',
+    image: '/assets/images/cagetory/Smart Lighting.webp',
     isActive: true,
   },
   {
-    name: 'Wellness & Dietary Supplements',
-    slug: 'wellness-dietary-supplements',
-    image: '/assets/images/cagetory/Wellness & Dietary Supplements.webp',
+    name: 'Plug & Power Devices',
+    slug: 'plug-power-devices',
+    image: '/assets/images/cagetory/Plug and Power Devices.webp',
     isActive: true,
   },
   {
-    name: 'Organic Herbs & Teas',
-    slug: 'organic-herbs-teas',
-    image: '/assets/images/cagetory/Organic Herbs & Teas.webp',
+    name: 'Electronic Components',
+    slug: 'electronic-components',
+    image: '/assets/images/cagetory/Electronic Components.webp',
     isActive: true,
   }
 ];
@@ -73,7 +73,7 @@ async function seed() {
       await mongoose.connect(mongodbUri);
     } catch (connErr) {
       console.log('SRV connection failed, trying direct connection fallback...');
-      const directUri = 'mongodb://RimonAyurbedic:xI2QuBaFZsYQ5vRD@ac-jrowhop-shard-00-00.e5n1hnl.mongodb.net:27017,ac-jrowhop-shard-00-01.e5n1hnl.mongodb.net:27017,ac-jrowhop-shard-00-02.e5n1hnl.mongodb.net:27017/RimonAyurbedic?ssl=true&authSource=admin';
+      const directUri = 'mongodb://inflationengineering:xI2QuBaFZsYQ5vRD@ac-jrowhop-shard-00-00.e5n1hnl.mongodb.net:27017,ac-jrowhop-shard-00-01.e5n1hnl.mongodb.net:27017,ac-jrowhop-shard-00-02.e5n1hnl.mongodb.net:27017/inflationengineering?ssl=true&authSource=admin';
       await mongoose.connect(directUri);
     }
     console.log('Connected to MongoDB successfully.');
@@ -86,7 +86,7 @@ async function seed() {
     const insertResult = await Category.insertMany(categories);
     console.log(`Seeded ${insertResult.length} categories successfully:`);
     insertResult.forEach((c, i) => {
-      console.log(`[Category ${i+1}] Name: "${c.name}", Slug: "${c.slug}", Image: "${c.image}"`);
+      console.log(`[Category ${i + 1}] Name: "${c.name}", Slug: "${c.slug}", Image: "${c.image}"`);
     });
 
   } catch (error) {
